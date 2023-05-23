@@ -63,6 +63,7 @@ def create_js_code(df, input_file_path, scaling_factor=1):
         user_id = row[df.columns[0]]
         raw_grade = row[df.columns[1]]
         grade = 0 if raw_grade == "-" else raw_grade/scaling_factor
+        grade = format(grade, '.2f').rstrip('0').rstrip('.') if isinstance(grade, float) else grade
         js_code += f'document.getElementById("{user_id}").value = "{grade}";\n'
 
     # Extract the base name of the input file (without extension)

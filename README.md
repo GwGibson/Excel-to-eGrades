@@ -20,10 +20,10 @@ The first step is to export the grades from Moodle as an excel file. To do this,
 In the directory where the script is located, run the script using Python:
 
 ```bash
-python grades_converter.py --scale_factor 10
+python excel_to_egrades.py --scale 10
 ```
 
-The `scale_factor` argument is optional and defaults to 1. This argument allows you to scale the grades if necessary. For example, if the total possible grade in Moodle is 100 but in eGrades it's 10, you would use a scale factor of 10.
+The `scale` argument is optional and defaults to 1. This argument allows you to scale the grades if necessary. For example, if the total possible grade in Moodle is 100 but in eGrades it's 10, you would use a scale factor of 10.
 
 A file dialog will appear. Select the Excel file that you exported from Moodle.
 
