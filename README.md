@@ -13,7 +13,11 @@ Before running the script, make sure that you have the following software instal
 
 ### Step 1: Export Grades from Moodle
 
-The first step is to export the grades from Moodle as an excel file. To do this, follow the instructions provided in the [Moodle documentation](https://docs.moodle.org/402/en/Grade_export).
+The first step is to export the grades from Moodle as an Excel spreadsheet. To do this, go to the 'Grades' tab, click on 'Grader report', and then choose to 'Export' as 'Excel spreadsheet'.
+
+![Export to Excel](docs/export-to-excel.png)
+
+You can also follow the instructions provided in the [Moodle documentation](https://docs.moodle.org/402/en/Grade_export).
 
 ### Step 2: Run the Script
 
