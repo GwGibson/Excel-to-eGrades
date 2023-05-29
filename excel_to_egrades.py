@@ -39,7 +39,7 @@ def get_scaling_factor():
     parser.add_argument('--scale', default=1, type=float, help='The scaling factor for the grades.')
     args = parser.parse_args()
 
-    if args.scale:
+    if args.scale and args.scale != 0.:
         scaling_factor = args.scale
     else:
         print("No scaling factor provided. Using scaling factor of 1.")
@@ -75,7 +75,7 @@ def create_js_code(df, input_file_path, scaling_factor=1):
     with open(output_file_path, 'w') as file:
         file.write(js_code)
 
-
+scaling_factor = get_scaling_factor()
 file_path = acquire_file()
 df = parse_data_frame(file_path)
-create_js_code(df, file_path, get_scaling_factor())
+create_js_code(df, file_path, scaling_factor)
